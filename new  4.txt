@@ -1,0 +1,11 @@
+SELECT u.username,v.venue_code,u.id as userId,s.school_code,s.id as schoolId FROM users u
+LEFT JOIN doctor_info di ON di.email=u.email
+LEFT JOIN doctor_venue dv ON dv.doctor_id=di.id
+LEFT JOIN venue_details v ON dv.venue_id=v.id
+LEFT JOIN school s ON s.school_code=v.venue_code WHERE u.username LIKE 'js%' ORDER BY u.id;
+
+
+
+="INSERT INTO school_student(created_by,created_date,last_modified_by,last_modified_date,status,email,grade,school_id,user_id)
+VALUES ('cbt-app',NOW(),'cbt-app',NOW(),'Active','"&B2&"',1,"&C2&","&A2&");"
+
